@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../keyboard.css">
+    <script src="../keyboard.js"></script>
+
+    <!-- MATHQUILL -->
+    <link rel="stylesheet" href="modules/mathquill/mathquill.css"/>
+    <script src="modules/mathquill/mathquill.js"></script>
+
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .mathfield {
+            width: 88%;
+
+            margin-left: 5%;
+
+            height: 2em;
+            font-size: 1.5em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="mathfield" id="mathfield"></div>
+    <script>
+        
+        var mathFieldSpan = document.getElementById('mathfield');
+
+        var MQ = MathQuill.getInterface(2);
+        var mathField = MQ.MathField(mathFieldSpan, {
+            spaceBehavesLikeTab: true,
+            // substituteTextarea: () => {
+            //     return $("<span id='subSpan'></span>")[0];
+            // },
+        });
+
+        var mathKeyboard = new MathKeyboard({
+            pages: [qwertyLayout, greekLettersLayout, defaultFuncLayout],
+            linkedElement: mathField,
+            linkType: "mathquill",
+            toggleTransitions: [
+                ["opacity", "0", "1", 1000, "ease-in"],
+                ["bottom", "-45%", "0%", 300, "ease-in"]
+            ]
+        });
+
+
+    </script>
+</body>
+</html>

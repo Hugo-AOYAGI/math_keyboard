@@ -1,0 +1,185 @@
+/* vietnamese */
+@font-face {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/epilogue/v1/O4ZMFGj5hxF0EhjimngomvnCCtqb30OXMDPSBJ_UqALfVVNU.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/epilogue/v1/O4ZMFGj5hxF0EhjimngomvnCCtqb30OXMDPSBZ_UqALfVVNU.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/epilogue/v1/O4ZMFGj5hxF0EhjimngomvnCCtqb30OXMDPSC5_UqALfVQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+  
+.mobile-keyboard {
+
+    width: 100%;
+    height: 40%;
+
+    font-size: 1.2em;
+
+    display: none;
+
+    background-color: white;
+
+    position: fixed;
+
+    bottom: 0;
+
+    transition: 0.3s all;
+
+    overflow-x: hidden;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.kb-page {
+
+    position: absolute;
+
+    padding-top: 1em;
+    width: 100%;
+    height: calc(100% - 1em);
+
+    background-color: white;
+
+    box-shadow: 0px 0px 15px inset rgba(0, 0, 0, 0.2);
+
+}
+
+
+.kb-row {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 20%;
+
+}
+
+.kb-key {
+    margin: 0.1em;
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Epilogue", sans-serif;
+
+}
+
+.kb-key sup {
+    margin-bottom: 1em;
+}
+
+.kb-key sub {
+    margin-top: 1em;
+}
+
+.kb-key:active {
+    border: 0.1px solid black;
+}
+
+.kb-key-small {
+    width: 9%;
+}
+
+.kb-key-medium {
+    width: 13%;
+}
+
+.caps-img {
+    width: 1em;
+}
+
+.kb-caps-enabled {
+    border: 1px solid rgb(39, 111, 156);
+}
+
+.backspace-img {
+    width: 1.5em;
+}
+
+.kb-dot::after {
+    content: "";
+    position: absolute;
+
+    margin-left: .5em;
+    margin-bottom: 2.5em;
+
+    width: .2em;
+    height: .2em;
+    border-radius: 50%;
+
+    background-color: lightgrey;
+}
+
+.kb-caps-lock-enabled::after {
+    background-color: rgb(39, 111, 156);
+}
+
+.spacebar-key {
+    margin-top: 0.5em;
+    border: 0.1px solid grey;
+    width: 40%;
+    height: 2.25em;
+}
+
+.kb-other-chars {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    border-radius: .5em;
+
+    border: .1px solid grey;
+    
+    width: 9%;
+    margin-left: 0.1em;
+    /* padding-top: 0.5em; */
+    /* padding-bottom: 0.5em; */
+
+}
+
+.kb-other-chars-btn {
+    width: 100%;
+    height: 2em;
+    
+    font-size: 1.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kb-spacer-s {
+    margin: 0.1em;
+    width: 9%;
+}
+
+.kb-spacer-m {
+    margin: 0.1em;
+    width: 13%;
+}
